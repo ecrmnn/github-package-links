@@ -1,0 +1,25 @@
+{
+  "manifest_version": 2,
+  "name": "Github Package.json Links",
+  "version": "1.0.0",
+  "description": "Automagically links all dependencies, devDependencies and optionalDependencies to npm when viewing a package.json file on Github",
+  "author": "Daniel Eckermann",
+  "icons": {
+    "128": "src/icons/icon_128.png"
+  },
+  "permissions": [
+    "webNavigation",
+    "https://github.com/*"
+  ],
+  "content_scripts": [
+    {
+      "run_at": "document_start",
+      "matches": [
+        "https://github.com/*"
+      ],
+      "js": [
+        "src/content.js"
+      ]
+    }
+  ]
+}
