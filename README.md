@@ -7,6 +7,7 @@
 
 ### Todo
 - Add to Chrome Store
+- Don't work on private repos
 
 ### License
 MIT © [Daniel Eckermann](http://danieleckermann.com)
