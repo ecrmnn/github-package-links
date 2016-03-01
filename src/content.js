@@ -28,14 +28,14 @@ let interval = setInterval(function () {
 const addLinksToNpm = function (pckg) {
   const dependencies = Object.assign({}, pckg.dependencies, pckg.devDependencies, pckg.optionalDependencies);
 
-  let raw = document.getElementsByClassName('file')[0].innerHTML;
+  let raw = document.getElementsByTagName('tbody')[0].innerHTML;
 
   Object.keys(dependencies).forEach(function (module) {
     const expression = new RegExp(module, 'g');
     raw = raw.replace(expression, makeLink(module));
   });
 
-  document.getElementsByClassName('file')[0].innerHTML = raw;
+  document.getElementsByTagName('tbody')[0].innerHTML = raw;
 };
 
 const makeLink = function (module) {
